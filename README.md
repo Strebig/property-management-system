@@ -1,12 +1,12 @@
-# c319_rental_property
+# Property Management System
 
-https://docs.google.com/document/u/1/d/e/2PACX-1vRrDSA3breHKwDA84knP-RtyBpBB7CHAJL33Uv11yhHRqEL0fL8LbXYfSXoZ1XHNjahbotyLovFcM6D/pub
+1. Property Manager Portal
+2. Tenant Portal
 
-### Members 
-- Howard Moore
-- Marlon Clay
-- Chris Gormley
-- Nick Strebig
+### Property Manager Portal
 
-### Project Manager
-- Andy
+- A system for property managers to keep track of their rental properties, tenants, upcoming payments, and approving/denying tenant maintenance requests.
+
+### Tenant Portal
+
+- A system for tenants to keep in touch with their landlords in a very convenient manner that is non-intrusive. They are able to see all of the property details and upcoming payments, as well as submit maintenance requests to the property manager that they see fit.
