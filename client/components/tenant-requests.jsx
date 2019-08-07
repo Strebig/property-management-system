@@ -75,17 +75,17 @@ export default class TenantRequest extends React.Component{
             <Nav pills>
                 <Col>
                     <NavItem>
-                        <NavLink style={{color: "white"}} href="/tenant-main">Tenant Summary</NavLink>
+                        <Link style={{color: "white"}} to="/tenant-main">Tenant Summary</Link>
                     </NavItem>
                 </Col>
                 <Col>
                     <NavItem>
-                        <NavLink style={{color: "white"}} href="/tenant-owner">Property Information</NavLink>
+                        <Link style={{color: "white"}} to="/tenant-owner">Property Information</Link>
                     </NavItem>
                 </Col>
                 <Col>
                     <NavItem>
-                        <NavLink className='active' href="/tenant-request">Request Repairs</NavLink>
+                        <Link className='active' to="/tenant-request">Request Repairs</Link>
                     </NavItem>
                 </Col>
             </Nav>

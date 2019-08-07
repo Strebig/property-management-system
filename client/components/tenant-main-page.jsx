@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row, Container, Nav, NavItem, NavLink, Col } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 export default class TenantMain extends React.Component{
     constructor(props){
@@ -34,17 +35,17 @@ export default class TenantMain extends React.Component{
                 <Nav pills >
                     <Col>
                         <NavItem>
-                            <NavLink className='active' href="/tenant-main">Tenant Summary</NavLink>
+                            <Link className='active' to="/tenant-main">Tenant Summary</Link>
                         </NavItem>
                     </Col>
                     <Col>
                         <NavItem>
-                            <NavLink style={{color: "white"}} href="/tenant-owner">Property Information</NavLink>
+                            <Link style={{color: "white"}} to="/tenant-owner">Property Information</Link>
                         </NavItem>
                     </Col>
                     <Col>
                         <NavItem>
-                            <NavLink style={{color: "white"}} href="/tenant-request">Request Repairs</NavLink>
+                            <Link style={{color: "white"}} to="/tenant-request">Request Repairs</Link>
                         </NavItem>
                     </Col>
                 </Nav>

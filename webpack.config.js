@@ -1,7 +1,7 @@
 const path = require('path');
 
 const srcPath = path.resolve(__dirname, 'client');
-const publicPath = path.resolve(__dirname, 'server/public');
+const publicPath = path.resolve(__dirname, 'server/public'); 
 
 module.exports = {
   resolve: {
@@ -17,12 +17,12 @@ module.exports = {
         test: /\.jsx?$/,
         include: srcPath,
         use: {
-          loader: 'babel-loader',
-          options: {
-            plugins: [
-              '@babel/plugin-transform-react-jsx'
-            ]
-          }
+            loader: 'babel-loader',
+            options: {
+                plugins: [
+                    '@babel/plugin-transform-react-jsx'
+                ]
+            }
         }
       }
     ]

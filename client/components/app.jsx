@@ -21,30 +21,40 @@ export default class App extends React.Component{
             properties: {}
         }
     }
+
     render(){
+
+        const Layout = ({ children }) => {
+            return (
+                <React.Fragment>
+                    <Row>
+                        <Header/>
+                    </Row>
+                    {children}
+                    <Row>
+                        <Footer/>
+                    </Row>
+                </React.Fragment>
+            )
+        }
+
         return(
-            <React.Fragment>
-            <Row>
-                <Header/>
-            </Row>
-                <Router>
-                    <Switch>
+            <Router>
+                <Switch>
+                    <Layout>
                         <Route exact path="/" component={LandingPage} />
-                        <Route path="/manager-main" component={ManagerMain} />
-                        <Route exact path="/property/:id" component ={PropertyDetailPage} />
-                        <Route path="/add-property" component ={AddProperty} />
-                        <Route path="/tenant-main" component ={TenantMain} />                    
-                        <Route exact path="/property/:id/add-unit/" component ={AddUnit} />
-                        <Route path="/tenant-owner" component ={TenantOwner} />
-                        <Route path="/tenant-request" component ={TenantRequest} />
-                        <Route path="/property/:id/add-tenant" component ={AddTenant} />
-                        <Route path="/property/:id/manager-review" component ={ManagerReview} />
-                    </Switch>
-                </Router>
-                <Row>
-                    <Footer />
-                </Row>
-            </React.Fragment>
+                        <Route exact path="/manager-main" component={ManagerMain} />  
+                        <Route exact path="/tenant-main" component={TenantMain} />                    
+                        <Route exact path="/tenant-owner" component={TenantOwner} />
+                        <Route exact path="/tenant-request" component={TenantRequest} />
+                        <Route exact path="/add-property" component={AddProperty} />
+                        <Route path="/property/:id" component={PropertyDetailPage} />
+                        <Route path="/property/:id/add-unit/" component={AddUnit} />
+                        <Route path="/property/:id/add-tenant" component={AddTenant} />
+                        <Route path="/property/:id/manager-review" component={ManagerReview} />
+                    </Layout>
+                </Switch>
+            </Router>
         );
     }
 }
