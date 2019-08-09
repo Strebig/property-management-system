@@ -2,7 +2,6 @@ import React from 'react';
 import { Container, Row, Col, Card, CardTitle, CardBody } from 'reactstrap';
 
 function ManagerListItem(props){
-    // this.setStatus
     if (props.managerList.length < 1){
         return(
             <Container>
@@ -12,7 +11,6 @@ function ManagerListItem(props){
             </Container>
         );
     }
-console.log(props);
     const outputList = props.managerList.map(request=>{
         return(
             <Container className="mb-3">

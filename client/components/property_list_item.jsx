@@ -1,8 +1,14 @@
 import React from 'react';
 import { Container, Row, Col, Card, CardImg, CardTitle, CardBody } from 'reactstrap';
+import {Link} from 'react-router-dom';
 
-function PropertyListItem(props){
-    if (props.propertyList.length < 1){
+class PropertyListItem extends React.Component{
+    constructor(props){
+        super(props);
+    }
+
+    render(){
+    if (this.props.propertyList.length < 1){
         return(
             <Container>
                 <Row>
@@ -12,10 +18,11 @@ function PropertyListItem(props){
             </Container>
         );
     }
-    const outputList = props.propertyList.map(property=>{
+    const outputList = this.props.propertyList.map(property=>{
         return(
             <Container className="mb-3">
-                <Card className="property-card" key={property.id} onClick={()=>window.location = "/property/"+property.id}>
+                <Link to={"/property/"+property.id}>
+                <Card className="property-card" key={property.id} >
                     <Row>
                         <Col sm="4">
                             <CardImg src={property.image ? property.image : "/images/business_default_image.jpg"} className="property-img" />
@@ -40,10 +47,12 @@ function PropertyListItem(props){
                         </Col>
                     </Row>
                 </Card>
+                </Link>
             </Container>
         );
     })
     return outputList;
+}
 }
 
 export default PropertyListItem;

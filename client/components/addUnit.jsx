@@ -28,9 +28,7 @@ export default class AddUnit extends React.Component{
         this.setState({ status: e.target.value });
     }
 
-    createUnit(event){
-        // event.preventDefault();
-        
+    createUnit(event){        
         let data = {
             property_id: this.props.propertyID,
             unit_number: this.state.unit_number,
@@ -58,13 +56,13 @@ export default class AddUnit extends React.Component{
                     <Col className="details-header text-center py-2">
                             <Nav pills>
                                 <Col>
-                                    <a className="detail-link p-2 my-1" href={`/property/${this.props.propertyID}`}>Property Summary</a>
+                                    <Link className="detail-link p-2 my-1" to={`/property/${this.props.propertyID}`}>Property Summary</Link>
                                 </Col>
                                 <Col>
-                                    <a className="detail-link p-2 my-1" href={`/property/${this.props.propertyID}/add-unit`}>Add Unit</a>
+                                    <Link className="detail-link p-2 my-1" to={`/property/${this.props.propertyID}/add-unit`}>Add Unit</Link>
                                 </Col>
                                 <Col>
-                                    <a className="detail-link p-2 my-1" href={`/property/${this.props.propertyID}/manager-review`}>Repair Requests</a>
+                                    <Link className="detail-link p-2 my-1" to={`/property/${this.props.propertyID}/manager-review`}>Repair Requests</Link>
                                 </Col>
                             </Nav>
                     </Col>

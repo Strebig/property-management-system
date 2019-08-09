@@ -2,6 +2,7 @@ import React from 'react';
 import {Container, Row, Col, Nav, CardImg} from 'reactstrap';
 import UnitItems from './unit_items';
 import AddImage from './addImage';
+import {Link} from 'react-router-dom';
 
 export default (props)=> {
     let image = null;
@@ -19,7 +20,7 @@ export default (props)=> {
             <Row>
                 <Col className="header-background">
                     <h1 className="property-detail-header text-center display-3">{props.propertyDetail.property_name}</h1>
-                    <h1 className="property-detail-header text-center display-5">{props.propertyDetail.street_address}</h1>
+                    <h2 className="property-detail-header text-center display-5">{props.propertyDetail.street_address}</h2>
                 </Col> 
             </Row>
             <Row>
@@ -27,13 +28,13 @@ export default (props)=> {
                 <Container>
                     <Nav pills>
                         <Col>
-                            <a className="detail-link p-2 my-1" href="/manager-main">Property Summary</a>
+                            <Link className="detail-link p-2 my-1" to="/manager-main">Property Summary</Link>
                         </Col>
                         <Col>
-                            <a className="detail-link p-2 my-1" href={`/property/${props.propertyDetail.id}/add-unit`}>Add Unit</a>
+                            <Link className="detail-link p-2 my-1" to={`/property/${props.propertyDetail.id}/add-unit`}>Add Unit</Link>
                         </Col>
                         <Col>
-                            <a className="detail-link p-2 my-1" href={`/property/${props.propertyDetail.id}/manager-review`}>Repair Requests</a>
+                            <Link className="detail-link p-2 my-1" to={`/property/${props.propertyDetail.id}/manager-review`}>Repair Requests</Link>
                         </Col>
                     </Nav>
                 </Container>
@@ -80,7 +81,7 @@ export default (props)=> {
                 <Col>
                 <Row >
                     <h5 className="mr-5">
-                        <a style={{color: 'white', textShadow: 20 }} href={`/property/${props.propertyDetail.id}/add-unit`}>+ Add Unit</a>
+                        <Link style={{color: 'white', textShadow: 20 }} to={`/property/${props.propertyDetail.id}/add-unit`}>+ Add Unit</Link>
                     </h5>
                 </Row>
                 </Col>

@@ -45,7 +45,6 @@ export default class TenantRequest extends React.Component{
     }
     
     createRepairRequest(event){
-        // event.preventDefault();
         let data = {
             tenant_phone: this.state.tenant_phone,
             tenant_email: this.state.tenant_email,

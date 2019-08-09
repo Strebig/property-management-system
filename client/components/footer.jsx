@@ -16,7 +16,6 @@ export default class Footer extends React.Component{
                             <ul>
                                 <li><Link to="/">Home</Link></li>
                                 <li><Link to="/manager-main">Property Manager Portal</Link></li>
-                                <li><Link to="/manager-main" >Manager Portal</Link></li>
                                 <li><Link to="/tenant-main">Tenant Portal</Link></li>
                             </ul>
                         </Col>

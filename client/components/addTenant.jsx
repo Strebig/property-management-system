@@ -58,7 +58,6 @@ export default class AddTenant extends React.Component{
         this.setState({ unit_ID: e.target.value});
     }
     createTenant(e){
-        // e.preventDefault();
         let tenantData = {
             business_name: this.state.business_name,
             contact_name: this.state.contact_name,

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Row, Container, Nav, NavItem, NavLink, Button, Col} from 'reactstrap';
+import {Row, Container, Button, Col} from 'reactstrap';
 import PropertyListItem from './property_list_item';
 import {Link} from 'react-router-dom';
 
@@ -32,7 +32,7 @@ class PropertyList extends React.Component{
                 <Row className="col-8 offset-2">
                     <Container>
                         <Row className='my-5'>
-                            <PropertyListItem propertyList={this.state.properties} setView={this.props.setView} />
+                            <PropertyListItem propertyList={this.state.properties}  />
                             <Link to="/add-property" style={{color: 'white', margin:'auto'}}>
                                 <Button size='lg' color="info">Add Property</Button>
                             </Link>

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Row, Container, Button, Col, Nav} from 'reactstrap';
+import {Row, Col, Nav} from 'reactstrap';
 import ManagerListItem from './manager-request-item';
 import {Link} from 'react-router-dom';
 
@@ -50,7 +50,7 @@ export default class ManagerReview extends React.Component{
                 <Row>
                     <Col className="details-header text-center py-2">
                         <Nav pills>
-                            <Col>
+                            {/* <Col>
                                 <a className="detail-link p-2 my-1" href={`/property/${this.props.match.params.id}`}>Property Summary</a>
                             </Col>
                             <Col>
@@ -58,6 +58,15 @@ export default class ManagerReview extends React.Component{
                             </Col>
                             <Col>
                                 <a className="detail-link p-2 my-1" href={`/property/${this.props.match.params.id}/manager-review`}>Repair Requests</a>
+                            </Col> */}
+                            <Col>
+                                <Link className="detail-link p-2 my-1" to={`/property/${this.props.match.params.id}`}>Property Summary</Link>
+                            </Col>
+                            <Col>
+                                <Link className="detail-link p-2 my-1" to={`/property/${this.props.match.params.id}/add-unit`}>Add Unit</Link>
+                            </Col>
+                            <Col>
+                                <Link className="detail-link p-2 my-1" to={`/property/${this.props.match.params.id}/manager-review`}>Repair Requests</Link>
                             </Col>
                         </Nav>
                     </Col>

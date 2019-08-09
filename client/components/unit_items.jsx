@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row, Spinner, Col, ToastBody, Toast, ToastHeader, Button, Modal, ModalHeader, ModalFooter, ModalBody } from 'reactstrap';
+import {Link} from 'react-router-dom';
 
 class UnitItems extends React.Component{
     constructor(props){
@@ -70,7 +71,7 @@ class UnitItems extends React.Component{
                         </ToastHeader>
                         <ToastBody>
                             <p className="vacant text-muted">Vacant</p>
-                            <p className="text-center"><a style={{ fontSize: 15 }} href={`/property/${this.props.propertyID}/add-tenant`}>+ Add Tenant</a></p>
+                            <Link className="text-center" style={{ fontSize: 15 }} to={`/property/${this.props.propertyID}/add-tenant`}>+ Add Tenant</Link>
                         </ToastBody>
                     </Toast>
                 </Col>
