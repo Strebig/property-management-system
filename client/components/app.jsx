@@ -43,15 +43,15 @@ export default class App extends React.Component{
                 <Switch>
                     <Layout>
                         <Route exact path="/" component={LandingPage} />
-                        <Route exact path="/manager-main" component={ManagerMain} />  
+                        <Route path="/manager-main" component={ManagerMain} />  
                         <Route exact path="/tenant-main" component={TenantMain} />                    
                         <Route exact path="/tenant-owner" component={TenantOwner} />
                         <Route exact path="/tenant-request" component={TenantRequest} />
                         <Route exact path="/add-property" component={AddProperty} />
-                        <Route path="/property/:id" component={PropertyDetailPage} />
-                        <Route path="/property/:id/add-unit/" component={AddUnit} />
-                        <Route path="/property/:id/add-tenant" component={AddTenant} />
-                        <Route path="/property/:id/manager-review" component={ManagerReview} />
+                        <Route exact path="/property/:id" component={PropertyDetailPage} />
+                        <Route exact path="/property/:id/add-unit/" component={AddUnit} />
+                        <Route exact path="/property/:id/add-tenant" component={AddTenant} />
+                        <Route exact path="/property/:id/manager-review" component={ManagerReview} />
                     </Layout>
                 </Switch>
             </Router>
